@@ -76,7 +76,7 @@ function drawKeyPoints() {
 
             if (abs(poses[0].pose.rightEar.y - poses[0].pose.rightShoulder.y) > 25 && c === 1) {
                 a = 1; c = 0; b = 0;
-                if(move_count < 5) 
+                if(move_count < 100) 
                     move_count++;
             }
         }
@@ -89,7 +89,7 @@ function drawKeyPoints() {
                 $("#counting-id").fadeIn();
             });
         }
-        if (move_count == 5 && saved == false) {
+        if (move_count == 100 && saved == false) {
            
             var audio = new Audio('C:/Users/Win10/Desktop/datasets/test.wav');
             audio.play();
